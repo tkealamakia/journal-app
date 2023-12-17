@@ -1,4 +1,5 @@
 import EntryShow from "./EntryShow";
+import { Link } from 'react-router-dom';
 
 function EntryList({ entries }) {
   const renderedEntries = entries.map((entry) => {
@@ -16,6 +17,7 @@ function EntryList({ entries }) {
           {renderedEntries}
         </table>
       </div>
+      <Link to="/entry-form">Add an Entry</Link>
     </section>
   );
 }

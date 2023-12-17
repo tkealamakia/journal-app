@@ -1,7 +1,9 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-function Entry({ onSubmit }) {
+function EntryForm({ onSubmit }) {
   const[entry, setEntry] = useState('');
+  const navigate = useNavigate();
   const handleFormSubmit = (event) => {
     event.preventDefault();
     const journalEntry = {
@@ -9,6 +11,7 @@ function Entry({ onSubmit }) {
       text: event.target.text.value
     };
     onSubmit(journalEntry);
+    navigate('/');
   }
   return( 
       <section className="section">
@@ -37,4 +40,4 @@ function Entry({ onSubmit }) {
   );
 }
 
-export default Entry;
+export default EntryForm;
