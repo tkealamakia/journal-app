@@ -31,7 +31,7 @@ function EntryForm({ onSubmit }) {
             </div>
             <div className="field">
               <div className="control">
-                <button type="submit" class="button is-info">Create</button>
+                <button type="submit" className="button is-info">Create</button>
               </div>
             </div>
           </form>

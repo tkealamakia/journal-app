@@ -10,11 +10,13 @@ function EntryList({ entries }) {
     <section className="section">
       <div className="container">
         <table>
-          <tr>
-            <th>Date</th>
-            <th>Entry</th>
-          </tr>
-          {renderedEntries}
+          <tbody>
+            <tr>
+              <th>Date</th>
+              <th>Entry</th>
+            </tr>
+            {renderedEntries}
+          </tbody>
         </table>
       </div>
       <Link to="/entry-form">Add an Entry</Link>
